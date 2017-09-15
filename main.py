@@ -117,8 +117,6 @@ class Example(QWidget):
 		self.imagel.setPixmap(QPixmap("./icon/weather/" + self.todaycode + ".png").scaled(50, 50))
 		self.imager = QLabel(self)
 		self.imager.setPixmap(QPixmap("./icon/weather/" + self.tomorrowcode + ".png").scaled(50, 50))
-		#self.imagel.setMinimumSize(100, 100)
-		#self.imager.setMinimumSize(100, 100)
 		self.imagel.setGeometry(290, 200, 50, 50)
 		self.imager.setGeometry(410, 200, 50, 50)
 
@@ -178,6 +176,8 @@ class Example(QWidget):
 
 			self.lblweatherl.setText(self.todaymax + "℃~" + self.todaymin + '℃')
 			self.lblweatherr.setText(self.tomorrowmax + "℃~" + self.tomorrowmin + '℃')
+			self.imagel.setPixmap(QPixmap("./icon/weather/" + self.todaycode + ".png").scaled(50, 50))
+			self.imager.setPixmap(QPixmap("./icon/weather/" + self.tomorrowcode + ".png").scaled(50, 50))
 
 		localtime = list(time.localtime(time.time()))
 		mon = localtime[1]
